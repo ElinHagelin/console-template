@@ -29,19 +29,44 @@ import { question } from 'readline-sync'
 // 	console.log(`Your number is 100!`);
 // }
 
-let secret = Math.floor(Math.random() * 100) + 1
-let guess = Number(question('Guess a number: '))
 
-if (guess !== secret) {
-	for (let guessCounter = 1; guess == secret; guessCounter++) {
 
-		if (guess < secret) {
-			console.log(`Your guess is to low`);
-		} else if (guess > secret) {
-			console.log(`Your guess is to high`);
-		}
-		console.log(`guesses: ${guessCounter}`);
+// function guessingGame() {
+// 	let secret = Math.floor(Math.random() * 100) + 1
+
+// 	for (let guessCounter = 1; guessCounter < 10; guessCounter++) {
+// 		let guess = Number(question('Guess a number: '))
+
+// 		if (guess < secret) {
+// 			console.log(`Your guess is to low`);
+// 		} else if (guess > secret) {
+// 			console.log(`Your guess is to high`);
+// 		} else if (guess === secret) {
+// 			console.log(`Yay, ${guess} is right! you guessed it in ${guessCounter} tries!`);
+// 			return
+// 		}
+// 	}
+// }
+
+// guessingGame()
+
+function calculator() {
+	let x = Number(question('Please enter a number: '))
+	let method = question('+, -, / or *?: ')
+	let y = Number(question('Another number: '))
+
+	if (method == '+') {
+		console.log(`The sum of ${x} + ${y} is: ${x + y}`)
 	}
-} else {
-	console.log(`Hurray, your guess was right!`);
+	else if (method == '-') {
+		console.log(`The sum of ${x} - ${y} is: ${x - y}`)
+	}
+	else if (method == '*') {
+		console.log(`The sum of ${x} * ${y} is: ${x * y}`)
+	}
+	else if (method == '/') {
+		console.log(`The sum of ${x} / ${y} is: ${x / y}`)
+	}
 }
+
+calculator()
