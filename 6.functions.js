@@ -135,3 +135,132 @@ import { question } from 'readline-sync'
 
 
 //  ¤ Övning 6.6
+
+// function roundNumber(x) {
+// 	let round = Math.round(x * 100) / 100
+// 	console.log(round);
+// }
+// roundNumber(4, 9723487234)
+
+
+
+//  ¤ Övning 6.7a
+
+// function paragraph(p) {
+// 	let paragraphTags = `<p>${p}</p>`
+// 	return paragraphTags
+// }
+
+// let paragraphVar = paragraph("hej")
+// console.log(paragraphVar);
+
+
+
+//  ¤ Övning 6.7b
+
+// function tag(tagName, tagContent) {
+// 	let completeTag = `<${tagName}>${tagContent}</${tagName}>`
+// 	console.log(completeTag);
+// 	return completeTag
+// }
+
+// tag('h1', 'huvudrubrik')
+
+
+
+
+//  ¤ Övning 6.8
+
+// function daysInMonth(m) {
+// 	let days31 = m === 'jan' || m === 'mar' || m === 'maj' || m === 'jul' || m === 'aug' || m === 'okt' || m === 'dec'
+// 	let days30 = m === 'apr' || m === 'jun' || m === 'sep' || m === 'nov'
+// 	if (days31) {
+// 		return 31
+// 	}
+// 	else if (days30) {
+// 		return 30
+// 	}
+// 	else {
+// 		return 28
+// 	}
+// }
+
+// let answerDays = daysInMonth('feb')
+// console.log(answerDays);
+
+
+
+
+//  ¤ Övning 6.9a
+
+// const substringMaker = x => x.substring(0, 3)
+
+// console.log(substringMaker('programmering'));
+
+
+
+
+//  ¤ Övning 6.9b
+
+// const datePattern = /^([0-9]{4}-[0-9]{2}-[0-9]{2})$/;
+
+// function year(y) {
+// 	if (datePattern.test(y) == true) {
+// 		return y.substring(0, 4)
+// 	}
+// 	else {
+// 		return 'Enter the date in the format "YYYY-MM-DD", please'
+// 	}
+// }
+
+// let checkYear = year('1991-04-08')
+// console.log(checkYear);
+
+
+
+
+//  ¤ Övning 6.9c
+
+// const datePattern = /^([0-9]{4}-[0-9]{2}-[0-9]{2})$/;
+
+// function month(m) {
+
+// 	if (datePattern.test(m) == true) {
+// 		return m.substring(5, 7)
+// 	}
+// 	else {
+// 		return 'Enter the date in the format "YYYY-MM-DD", please'
+// 	}
+// }
+
+// function day(d) {
+
+// 	if (datePattern.test(d) == true) {
+// 		return d.substring(8, 10)
+// 	}
+// 	else {
+// 		return 'Enter the date in the format "YYYY-MM-DD", please'
+// 	}
+// }
+
+// function daysBetween(x, z) {
+// 	if (datePattern.test(x) == true && datePattern.test(z) == true) {
+// 		let monthsBetween = month(z) - month(x)
+// 		let daysBetween = (monthsBetween * 30) + (day(z) - day(x))
+// 		return daysBetween
+// 	}
+// 	else {
+// 		return 'Enter the date in the format "YYYY-MM-DD", please'
+// 	}
+// }
+
+// let checkDaysBetween = daysBetween('1991-04-08', '1991-07-02')
+// console.log(checkDaysBetween);
+
+
+
+//  ¤ Övning 6.10
+
+// const fahrenheitConvert = f => Math.round(((f - 32) * 5 / 9) * 10) / 10
+
+// console.log(fahrenheitConvert(98));
