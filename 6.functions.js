@@ -271,15 +271,15 @@ import { question } from 'readline-sync'
 
 //  ¤ Övning 6.11
 
-// function add(UpToNumber) {
-// 	let sum = 0
-// 	for (let x = 1; x <= UpToNumber; x++) {
-// 		sum = sum + x
-// 		console.log(sum);
-// 	}
-// }
+function add(UpToNumber) {
+	let sum = 0
+	for (let x = 1; x <= UpToNumber; x++) {
+		sum = sum + x
+		console.log(sum);
+	}
+}
 
-// add(30)
+add(100)
 
 
 
@@ -299,3 +299,23 @@ import { question } from 'readline-sync'
 // }
 
 // backwards('elinhagelin elinhagelin')
+
+
+
+
+//  ¤ Övning 6.13
+
+// function randomInt(min, max) {
+// 	let random = Math.random()
+// 	let randomMin = random * min
+// 	console.log(randomMin);
+// 	let randomMax = random * max
+// 	console.log(randomMax);
+// 	random = random >= randomMin && random <= randomMax
+// 	console.log(random);
+// 	return Math.floor(random)
+// }
+
+// console.log(randomInt(10, 50));
+
+// console.log(Math.random() * 10);
