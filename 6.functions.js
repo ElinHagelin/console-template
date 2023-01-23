@@ -206,15 +206,15 @@ import { question } from 'readline-sync'
 
 // function year(y) {
 // 	if (datePattern.test(y) == true) {
-// 		return y.substring(0, 4)
+// 		return Number(y.substring(0, 4))
 // 	}
 // 	else {
 // 		return 'Enter the date in the format "YYYY-MM-DD", please'
 // 	}
 // }
 
-// let checkYear = year('1991-04-08')
-// console.log(checkYear);
+// // let checkYear = year('1991-04-08')
+// // console.log(checkYear);
 
 
 
@@ -226,7 +226,7 @@ import { question } from 'readline-sync'
 // function month(m) {
 
 // 	if (datePattern.test(m) == true) {
-// 		return m.substring(5, 7)
+// 		return Number(m.substring(5, 7))
 // 	}
 // 	else {
 // 		return 'Enter the date in the format "YYYY-MM-DD", please'
@@ -236,7 +236,7 @@ import { question } from 'readline-sync'
 // function day(d) {
 
 // 	if (datePattern.test(d) == true) {
-// 		return d.substring(8, 10)
+// 		return Number(d.substring(8, 10))
 // 	}
 // 	else {
 // 		return 'Enter the date in the format "YYYY-MM-DD", please'
@@ -245,8 +245,9 @@ import { question } from 'readline-sync'
 
 // function daysBetween(x, z) {
 // 	if (datePattern.test(x) == true && datePattern.test(z) == true) {
-// 		let monthsBetween = month(z) - month(x)
-// 		let daysBetween = (monthsBetween * 30) + (day(z) - day(x))
+// 		let yearsBetween = (year(z) - year(x)) * 365
+// 		let monthsBetween = ((month(z) - month(x))) * 30
+// 		let daysBetween = yearsBetween + monthsBetween + (day(z) - day(x))
 // 		return daysBetween
 // 	}
 // 	else {
@@ -254,8 +255,8 @@ import { question } from 'readline-sync'
 // 	}
 // }
 
-// let checkDaysBetween = daysBetween('1991-04-08', '1991-07-02')
-// console.log(checkDaysBetween);
+// let checkDaysBetween = daysBetween('2021-11-27', '2023-01-27')
+// console.log(`antalet dagar mellan är ${checkDaysBetween}`);
 
 
 
@@ -264,3 +265,37 @@ import { question } from 'readline-sync'
 // const fahrenheitConvert = f => Math.round(((f - 32) * 5 / 9) * 10) / 10
 
 // console.log(fahrenheitConvert(98));
+
+
+
+
+//  ¤ Övning 6.11
+
+// function add(UpToNumber) {
+// 	let sum = 0
+// 	for (let x = 1; x <= UpToNumber; x++) {
+// 		sum = sum + x
+// 		console.log(sum);
+// 	}
+// }
+
+// add(30)
+
+
+
+
+//  ¤ Övning 6.12
+
+// function backwards(sentence) {
+
+// 	let sentenceLength = sentence.length
+// 	let backwardSentence = ''
+
+// 	while (sentenceLength >= 0) {
+// 		backwardSentence = backwardSentence + sentence.charAt(sentenceLength)
+// 		sentenceLength--
+// 	}
+// 	console.log(backwardSentence);
+// }
+
+// backwards('elinhagelin elinhagelin')
