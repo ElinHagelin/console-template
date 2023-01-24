@@ -75,8 +75,38 @@ let HassesTamburinfabrik = {
 
 	orders: {
 		Horatio: {
-			firstOrder: { product: this.products.T1, price: this.products.T1.price, amount: 1 },
-			secondOrder: { product: this.products.T2, price: this.products.T2.price, amount: 2 }
+			firstOrder: {
+				product: this.products.T1,
+				price: this.products.T1.price,
+				amount: 1
+			},
+
+			secondOrder: {
+				product: this.products.T2,
+				price: this.products.T2.price,
+				amount: 2
+			}
+		}
+	}
+}
+
+let YlvasBokaffär = {
+	books: {
+		'Sagan om ringen': {
+			author: 'J.R.R. Tolkien',
+			genre: 'Fantasy'
+		},
+		'Stiftelsen': {
+			author: 'Isaac Asimov',
+			genre: 'Science fiction',
+		},
+		'Mistborn, the alloy of law': {
+			author: 'Brandon Sanderson',
+			genre: ['Science fiction', 'Fantasy']
+		},
+		'The wheel of time': {
+			author: 'Robert Jordan',
+			genre: 'Unclassified'
 		}
 	}
 }

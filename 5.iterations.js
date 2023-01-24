@@ -1,5 +1,6 @@
 import { question } from 'readline-sync'
 
+
 //  ¤ Övning 5.1a
 
 // function numberLoop() {
