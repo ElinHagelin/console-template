@@ -307,14 +307,13 @@ import { question } from 'readline-sync'
 
 export function randomInt(min, max) {
 	let r = Math.random()
-	min = Math.ceil(min);
-	max = Math.floor(max);
-	r = r * (max - min + 1) + min
-	return Math.floor(r)
+	let i = r * (max - min + 1) + min
+	return Math.floor(i)
 }
 
 
 
 console.log(randomInt(20, 30));
+
 
 // console.log(Math.random() * 10);

@@ -47,8 +47,9 @@ let school = {
 	teachers: 20,
 	students: 256,
 	adress: "skolgatan 1",
+	city: 'Nyköping',
 	teachersSubject: {
-		'Björn': 'Musik',
+		'Björn': ['Musik'],
 		'Benny': ['NO', 'Teknik'],
 		'Birgitta': ['Artificiell intelligens', 'Svenska']
 	}
@@ -59,10 +60,10 @@ let school = {
 let year = {
 	days31: ['january', 'march', 'may', 'july', 'august', 'october', 'december'],
 	days30: ['april', 'june', 'september', 'november'],
-	days28: 'febuary'
+	days28: ['febuary']
 }
 
-//  ¤ Övning 4d
+//  ¤ Övning 4d-e
 
 let HassesTamburinfabrik = {
 	employees: ['Hasse', 'Hedwig', 'Hermione'],
@@ -90,23 +91,31 @@ let HassesTamburinfabrik = {
 	}
 }
 
-let YlvasBokaffär = {
-	books: {
-		'Sagan om ringen': {
+console.log(HassesTamburinfabrik.);
+
+//  ¤ Övning 4f
+
+let ylvasBokaffär = {
+	books: [
+		{
+			title: 'Sagan om ringen',
 			author: 'J.R.R. Tolkien',
-			genre: 'Fantasy'
+			genre: ['Fantasy']
 		},
-		'Stiftelsen': {
+		{
+			title: 'Stiftelsen',
 			author: 'Isaac Asimov',
-			genre: 'Science fiction',
+			genre: ['Science fiction'],
 		},
-		'Mistborn, the alloy of law': {
+		{
+			title: 'Mistborn, the alloy of law',
 			author: 'Brandon Sanderson',
 			genre: ['Science fiction', 'Fantasy']
 		},
-		'The wheel of time': {
+		{
+			title: 'The wheel of time',
 			author: 'Robert Jordan',
-			genre: 'Unclassified'
+			genre: ['Unclassified']
 		}
-	}
+	]
 }

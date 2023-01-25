@@ -77,48 +77,49 @@ function switchNumbers() {
 
 //  ¤ Övning 6
 
-// import { randomInt } from './6.functions.js'
+import { randomInt } from './6.functions.js'
 
-// let randomList = []
+let randomList = []
 
-// for (let i = 0; i < 10; i++) {
-// 	randomList.push(randomInt(20, 30))
-// }
+for (let i = 0; i < 10; i++) {
+	randomList.push(randomInt(20, 30))
+}
 
-// function biggestNumber(arr) {
-// 	return Math.max(...arr)
-// }
 
-// function smallestNumber(arr) {
-// 	return Math.min(...arr)
-// }
 
-// function averageNumber(arr) {
-// 	let sum = 0
-// 	for (let i = 0; i < arr.length; i++) {
-// 		sum = sum + arr[i]
-// 	}
-// 	console.log(sum);
-// 	let average = sum / (arr.length)
-// 	return average
-// }
+function biggestNumber(arr) {
+	return Math.max(...arr)
+}
 
-// function secondBiggest(arr) {
-// 	let first = -1, second = -1;
+function smallestNumber(arr) {
+	return Math.min(...arr)
+}
 
-// 	for (let i = 0; i < arr.length; i++) {
-// 		if (arr[i] > first) {
-// 			second = first;
-// 			first = arr[i];
-// 		}
-// 		else if (arr[i] > second && arr[i] != first) {
-// 			second = arr[i];
-// 		}
-// 	}
-// 	return second;
-// }________________________________________________________________________??
+function averageNumber(arr) {
+	let sum = 0
+	for (let i = 0; i < arr.length; i++) {
+		sum = sum + arr[i]
+	}
 
-// console.log(randomList, secondBiggest(randomList));
+	return sum / (arr.length)
+}
+
+function secondBiggest(arr) {
+	let first = -1, second = -1;
+
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] > first) {
+			second = first;
+			first = arr[i];
+		}
+		else if (arr[i] > second && arr[i] != first) {
+			second = arr[i];
+		}
+	}
+	return second;
+}
+
+console.log(randomList, biggestNumber(randomList));
 
 
 
@@ -166,3 +167,48 @@ function switchNumbers() {
 // }
 
 // console.log(sameListRightWay(nautic), nautic)
+
+
+
+
+//  ¤ Övning 9
+
+const worldData = [
+	{ "name": "United Kingdom", "continent": "Europe", "population": 65270121, "pFemale": 0.508 },
+	{ "name": "Republic of Ireland", "continent": "Europe", "population": 4708209, "pFemale": 0.499 },
+	{ "name": "Australia", "continent": "Oceania", "population": 24482205, "pFemale": 0.502 },
+	{ "name": "Taiwan", "continent": "Asia", "population": 23522296, "pFemale": 0.501 },
+	{ "name": "Uruguay", "continent": "South America", "population": 3446772, "pFemale": 0.517 },
+	{ "name": "Morocco", "continent": "Africa", "population": 35010005, "pFemale": 0.510 },
+	{ "name": "Nigeria", "continent": "Africa", "population": 188688090, "pFemale": 0.494 },
+	{ "name": "Zimbabwe", "continent": "Africa", "population": 16051510, "pFemale": 0.507 },
+	{ "name": "China", "continent": "Asia", "population": 1381321335, "pFemale": 0.488 },
+	{ "name": "Mexico", "continent": "North America", "population": 129386794, "pFemale": 0.507 },
+	{ "name": "Canada", "continent": "North America", "population": 36446796, "pFemale": 0.504 },
+	{ "name": "Czech Republic", "continent": "Europe", "population": 10556351, "pFemale": 0.509 },
+	{ "name": "Iceland", "continent": "Europe", "population": 332631, "pFemale": 0.496 }
+];
+
+
+//  ¤ Övning 9a
+
+
+// worldData.forEach(element => console.log(element['name']));
+
+const worldDataCountries = worldData.map(element => element['name']);
+
+// console.log(worldDataCountries);
+
+
+
+//  ¤ Övning 9b
+
+let africanCountries = ['Morocco', 'Nigeria', 'Zimbabwe']
+
+// const firstAfricanCountry = worldDataCountries.find(africanCountry => )
+
+// const firstAfricanCountry = worldDataCountries.filter(firstAfricanCountry == africanCountries.find(index => index < 1));
+
+const firstAfricanCountry = worldDataCountries.find(firstAfrican => worldDataCountries == africanCountries);
+
+// console.log(firstAfrican);
