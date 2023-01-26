@@ -91,7 +91,7 @@ let HassesTamburinfabrik = {
 	}
 }
 
-console.log(HassesTamburinfabrik.);
+console.log(HassesTamburinfabrik);
 
 //  ¤ Övning 4f
 

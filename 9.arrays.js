@@ -77,49 +77,49 @@ function switchNumbers() {
 
 //  ¤ Övning 6
 
-import { randomInt } from './6.functions.js'
+// import { randomInt } from './6.functions.js'
 
-let randomList = []
+// let randomList = []
 
-for (let i = 0; i < 10; i++) {
-	randomList.push(randomInt(20, 30))
-}
+// for (let i = 0; i < 10; i++) {
+// 	randomList.push(randomInt(20, 30))
+// }
 
 
 
-function biggestNumber(arr) {
-	return Math.max(...arr)
-}
+// function biggestNumber(arr) {
+// 	return Math.max(...arr)
+// }
 
-function smallestNumber(arr) {
-	return Math.min(...arr)
-}
+// function smallestNumber(arr) {
+// 	return Math.min(...arr)
+// }
 
-function averageNumber(arr) {
-	let sum = 0
-	for (let i = 0; i < arr.length; i++) {
-		sum = sum + arr[i]
-	}
+// function averageNumber(arr) {
+// 	let sum = 0
+// 	for (let i = 0; i < arr.length; i++) {
+// 		sum = sum + arr[i]
+// 	}
 
-	return sum / (arr.length)
-}
+// 	return sum / (arr.length)
+// }
 
-function secondBiggest(arr) {
-	let first = -1, second = -1;
+// function secondBiggest(arr) {
+// 	let first = -1, second = -1;
 
-	for (let i = 0; i < arr.length; i++) {
-		if (arr[i] > first) {
-			second = first;
-			first = arr[i];
-		}
-		else if (arr[i] > second && arr[i] != first) {
-			second = arr[i];
-		}
-	}
-	return second;
-}
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (arr[i] > first) {
+// 			second = first;
+// 			first = arr[i];
+// 		}
+// 		else if (arr[i] > second && arr[i] != first) {
+// 			second = arr[i];
+// 		}
+// 	}
+// 	return second;
+// }
 
-console.log(randomList, biggestNumber(randomList));
+// console.log(randomList, biggestNumber(randomList));
 
 
 
@@ -203,12 +203,68 @@ const worldDataCountries = worldData.map(element => element['name']);
 
 //  ¤ Övning 9b
 
-let africanCountries = ['Morocco', 'Nigeria', 'Zimbabwe']
 
-// const firstAfricanCountry = worldDataCountries.find(africanCountry => )
+const firstAfricanCountry = worldData.find(country => country['continent'] == 'Africa')
 
-// const firstAfricanCountry = worldDataCountries.filter(firstAfricanCountry == africanCountries.find(index => index < 1));
+// console.log(firstAfricanCountry);
 
-const firstAfricanCountry = worldDataCountries.find(firstAfrican => worldDataCountries == africanCountries);
 
-// console.log(firstAfrican);
+
+
+//  ¤ Övning 9c
+
+// const OceanianCountries = worldData.filter(country => country['continent'] == 'Oceania')
+
+// let amountWomen = OceanianCountries.forEach(WPopulation => console.log('Antalet kvinnor i Australien är: ' + (WPopulation['pFemale']) * (WPopulation['population'])))
+
+
+
+//  ¤ Övning 9d
+
+let modifiedWorldData = worldData.map((country) => {
+	return { name: country.name, females: country.population * country.pFemale, men: country.population - country.population - country.pFemale }
+})
+
+// console.log(modifiedWorldData);
+
+
+
+//  ¤ Övning 9e
+
+const europeanCountries = worldData.filter(country => country['continent'] == 'Europe')
+// console.log(europeanCountries);
+
+let sum = 0
+europeanCountries.map(country => {
+	sum = sum + country.population
+})
+
+// console.log(sum);
+
+
+
+
+
+//  ¤ Övning 9f
+
+const firstCountryOver100m = worldData.find(country => country.population > 100000000)
+
+// console.log(firstCountryOver100m);
+
+
+
+
+//  ¤ Övning 9g
+
+const lessThan49ProcentWomen = worldData.filter(country => country.pFemale < 0.49)
+
+// console.log(lessThan49ProcentWomen);
+
+
+
+
+//  ¤ Övning 9h
+
+const iceland = worldData.find(country => country.name == 'Iceland')
+
+console.log(iceland.population);
